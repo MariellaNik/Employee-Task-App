@@ -73,6 +73,4 @@ addTask.addEventListener("submit", (event) => {
 })
 });  
 
-}
-
-//export { initialize };
+//} export { initialize };
