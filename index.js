@@ -1,4 +1,4 @@
-function initialize() {
+//function initialize() {
 document.addEventListener("DOMContentLoaded", function() {
 // Declare an empty array to hold the employees
 let employees = [];
@@ -75,4 +75,4 @@ addTask.addEventListener("submit", (event) => {
 
 }
 
-export { initialize };
+//export { initialize };
