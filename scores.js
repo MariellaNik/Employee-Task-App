@@ -1,4 +1,5 @@
-import { initialize } from './index.js';
+import { tasks } from './index.js';
+import { employees } from './index.js';
 
 initialize();
 
@@ -29,5 +30,3 @@ employees.forEach(employee => {
     listItem.textContent = `${employee.name}: ${employee.taskCount} tasks`;
     topEmployeesList.appendChild(listItem);
   }
-  
-  
