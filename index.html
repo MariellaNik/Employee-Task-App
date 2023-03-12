@@ -1,107 +1,120 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Tasks for Employees</title>
-    <script src="index.js"></script>
-    <style>
-        /* Styling for h1 */
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 1rem 0;
-  font-style: italic;
-}
+  <title>Tasks for Employees</title>
+  <script src="index.js"></script>
+  <style>
+    /* Styling for h1 */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      font-style: italic;
+    }
 
-/* Styling for h2 */
-h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin: 1.5rem 0 1rem;
-}
+    /* Styling for h2 */
+    h2 {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin: 1.5rem 0 1rem;
+    }
 
+    /* Styling for button */
+    button {
+      background-color: #34265e;
+      border: none;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      transition: background-color 0.3s ease;
+    }
 
-/* Styling for button */
-button {
-  background-color: #34265e;
-  border: none;
-  color: white;
-  padding: 0.75rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
-}
+    button:hover {
+      background-color: #3e8e41;
+    }
 
-button:hover {
-  background-color: #3e8e41;
-}
-    </style>
+    .containers{
+      margin-left:30px;
+      display:flex;
+      gap:165px;
+    }
+  </style>
+  <meta charset="UTF-8">
 </head>
 
 <body>
-    <h1>Employee Task Application</h1>
-    <p> This is an application in which you can input data for an employee and also assign tasks to the inputted employees.<br></p>
-    <p> Fill the forms and give it a try!</p>
-    <p><a href="scoresEmp.html">Click here if you want to see the TOP 5 employees with largest number of tasks done.</a></p>
+  <h1>Employee Task Application</h1>
+  <p> This is an application in which you can input data for an employee and also assign tasks to the inputted
+    employees.<br></p>
+  <p> Fill the forms and give it a try!</p>
+  <p><a href="scoresEmp.html">Click here if you want to see the TOP 5 employees with largest number of tasks done.</a>
+  </p>
 
-    <h2>Add Employee:</h2>
-    <form id="add-employee-form">
+  <div class="containers">
+    <div class="left">
+      <h2>Add Employee:</h2>
+      <form id="add-employee-form">
         <label for="employee-name">Full Name:</label>
         <input type="text" id="employee-name" name="employee-name" required>
 
-        <label for="employee-email">Email:</label>
+        <br><label for="employee-email">Email:</label>
         <input type="email" id="employee-email" name="employee-email" required>
 
-        <label for="employee-db">Date of Birth:</label>
+        <br><label for="employee-db">Date of Birth:</label>
         <input type="date" id="employee-db" name="employee-db" required>
 
-        <label for="employee-salary">Monthly Salary:</label>
+        <br><label for="employee-salary">Monthly Salary:</label>
         <input type="number" id="employee-salary" name="employee-salary" required>
 
         <br><br><button type="submit">Add This Employee</button>
-    </form>
+      </form>
+      <h2>Delete Employee:</h2>
+      <form id="delete-employee-form">
+        <label for="employee-name">Full Name:</label>
+        <input type="text" id="employee-name" name="employee-name" required>
 
-    <h2>Delete Employee:</h2>
-<form id="delete-employee-form">
-    <label for="employee-name">Full Name:</label>
-    <input type="text" id="employee-name" name="employee-name" required>
+        <br><label for="employee-db">Date of Birth:</label>
+        <input type="date" id="employee-db" name="employee-db" required>
 
-    <label for="employee-db">Date of Birth:</label>
-    <input type="date" id="employee-db" name="employee-db" required>
-
-    <br><br><button type="submit" >Delete Employee</button>
-</form>
-
-
-    <h2>Add Tasks:</h2>
-    <form id="add-task-form">
+        <br><br><button type="submit">Delete Employee</button>
+      </form>
+    </div>
+    <div class="right">
+      <h2>Add Tasks:</h2>
+      <form id="add-task-form">
         <label for="task-title">Title of the task:</label>
         <input type="text" id="task-title" name="task-title" required>
 
-        <label for="task-description">Describe of the task:</label>
+        <br><label for="task-description">Describe of the task:</label>
         <textarea id="task-description" name="task-description" required></textarea>
 
-        <label for="task-assignee">Assignee:</label>
+        <br><label for="task-assignee">Assignee:</label>
         <input type="text" id="task-assignee" name="task-assignee" required>
 
-        <label for="task-due">Due Date:</label>
+        <br><label for="task-due">Due Date:</label>
         <input type="date" id="task-due" name="task-due" required>
 
         <br><br><button type="submit">Assign This Task</button>
-    </form>
-    
-    <h2>Delete Task:</h2>
-    <form id="delete-task-form">
+      </form>
+
+      <h2>Delete Task:</h2>
+      <form id="delete-task-form">
         <label for="task-title">Task Title:</label>
         <input type="text" id="task-title" name="task-title" required>
-    
-        <br><br><button type="submit" >Delete Task</button>
-    </form>
 
-    <ul id="top-employees"></ul>
+        <br><br><button type="submit">Delete Task</button>
+      </form>
+
+    </div>
+  </div>
+
+  <ul id="top-employees"></ul>
 </body>
+
 </html>
