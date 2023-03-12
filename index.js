@@ -73,4 +73,6 @@ addTask.addEventListener("submit", (event) => {
 })
 });  
 
-//} export { initialize };
+export let tasks;
+export let employees;
+//export { initialize };
